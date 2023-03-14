@@ -28,7 +28,10 @@ Usage (based on [encryptededdy](https://github.com/encryptededdy/ThermAppCam)):
    name of the FITS will be the UTC time at that moment.
 
  - Pressing q or Q will cause the code to quit.
-
+--------------------------------------
+## Dependencies
+* v4l2loopback
+* libusb >= 1.0
 --------------------------------------
 * 2022-Feb-01 (DM): Rewrote the Makefile to take care of proper linking.
     make clean
