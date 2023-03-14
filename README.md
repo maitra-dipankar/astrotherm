@@ -1,7 +1,7 @@
 # astrotherm
-## Save frames from Therm-App IR camera as FITS images (in C)
+## * Save frames from Therm-App IR camera as FITS images (in C)
 
-## Median combine dark frames and dark subtract (in Python)
+## * Median combine dark frames and dark subtract (in Python)
 
 ![dark_subtraction](https://user-images.githubusercontent.com/81639258/224892783-925c929a-7b19-4f4e-b258-f1c56aa99bed.png)
  
