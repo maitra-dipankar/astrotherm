@@ -2,7 +2,7 @@
 Save frames from Therm-App IR camera as FITS images
 
 
-Usage (based on encryptededdy):
+Usage (based on [encryptededdy](https://github.com/encryptededdy/ThermAppCam)):
  - First make sure the v4l2loopback kernel module is loaded:
     sudo modprobe v4l2loopback
 
@@ -14,11 +14,11 @@ Usage (based on encryptededdy):
     After that is complete, you may remove the lens cap, open /dev/video0 in 
     your video player of choice, E.g.
     
-    vlc v4l2:///dev/video0
+    > vlc v4l2:///dev/video0
     
     or
     
-    mplayer tv://device=/dev/video
+    > mplayer tv://device=/dev/video
     
     to watch live stream video from the camera.
 
@@ -41,5 +41,4 @@ Usage (based on encryptededdy):
  https://github.com/encryptededdy/ThermAppCam (accessed 2023-Mar-13)
 
 * FITS writing based on:
- https://heasarc.gsfc.nasa.gov/docs/software/fitsio/c/c_user/node17.html
-
+ https://heasarc.gsfc.nasa.gov/docs/software/fitsio/c/c_user/node17.html (accessed 2023-Mar-13)
