@@ -1,8 +1,12 @@
 # astrotherm
-Save frames from Therm-App IR camera as FITS images
+## Save frames from Therm-App IR camera as FITS images (in C)
 
+## Median combine dark frames and dark subtract (in Python)
 
-Usage (based on [encryptededdy](https://github.com/encryptededdy/ThermAppCam)):
+![dark_subtraction](https://user-images.githubusercontent.com/81639258/224892783-925c929a-7b19-4f4e-b258-f1c56aa99bed.png)
+ 
+
+C-code usage (based on [encryptededdy](https://github.com/encryptededdy/ThermAppCam)):
  - First make sure the v4l2loopback kernel module is loaded:
     sudo modprobe v4l2loopback
 
@@ -29,9 +33,11 @@ Usage (based on [encryptededdy](https://github.com/encryptededdy/ThermAppCam)):
 
  - Pressing q or Q will cause the code to quit.
 --------------------------------------
-## Dependencies
+## Dependencies for the C-codes
 * v4l2loopback
 * libusb >= 1.0
+## Dependencies for the python code
+* numpy, astropy, matplotlib
 --------------------------------------
 * 2022-Feb-01 (DM): Rewrote the Makefile to take care of proper linking.
   > make clean
