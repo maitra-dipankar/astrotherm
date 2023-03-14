@@ -34,8 +34,9 @@ Usage (based on [encryptededdy](https://github.com/encryptededdy/ThermAppCam)):
 * libusb >= 1.0
 --------------------------------------
 * 2022-Feb-01 (DM): Rewrote the Makefile to take care of proper linking.
-    make clean
-    make
+  > make clean
+  
+  > make
 
 * Non-blocking ncurses getch() based on:
  https://www.raspberrypi.org/forums/viewtopic.php?t=177157 (accessed 2021-Aug-19)
