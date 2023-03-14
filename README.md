@@ -29,7 +29,7 @@ C-code usage (based on [encryptededdy](https://github.com/encryptededdy/ThermApp
     to watch live stream video from the camera.
 
  - While the live stream video is displayed on vlc or mplayer go to the 
-   terminal where you typed 'sudo thermapp'.
+   terminal where you typed 'sudo astrotherm'.
    Pressing s or S will save the instantaneous frame as a FITS image. The 
    name of the FITS will be the UTC time at that moment.
 
