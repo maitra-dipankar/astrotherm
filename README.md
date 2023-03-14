@@ -13,9 +13,13 @@ Usage (based on encryptededdy):
     automatic calibration. It will also dump these dark frames as FITS images. 
     After that is complete, you may remove the lens cap, open /dev/video0 in 
     your video player of choice, E.g.
-      vlc v4l2:///dev/video0
-      or
-      mplayer tv://device=/dev/video
+    
+    vlc v4l2:///dev/video0
+    
+    or
+    
+    mplayer tv://device=/dev/video
+    
     to watch live stream video from the camera.
 
  - While the live stream video is displayed on vlc or mplayer go to the 
