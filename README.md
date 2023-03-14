@@ -38,7 +38,7 @@ Usage (based on encryptededdy):
  https://www.raspberrypi.org/forums/viewtopic.php?t=177157 (accessed 2021-Aug-19)
 
 * ThermApp reading based on:
- github.com/encryptededdy/ThermAppCam (accessed 2021-Aug-19)
+ https://github.com/encryptededdy/ThermAppCam (accessed 2023-Mar-13)
 
 * FITS writing based on:
  https://heasarc.gsfc.nasa.gov/docs/software/fitsio/c/c_user/node17.html
