@@ -41,6 +41,7 @@ C-code usage (based on [encryptededdy](https://github.com/encryptededdy/ThermApp
 ## Dependencies for the python code
 * numpy, astropy, matplotlib
 --------------------------------------
+### Notes/References
 * 2022-Feb-01 (DM): Rewrote the Makefile to take care of proper linking.
   > make clean
   
