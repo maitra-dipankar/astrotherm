@@ -2,7 +2,7 @@
 Save frames from Therm-App IR camera as FITS images
 
 
-* Usage (based on encryptededdy):
+Usage (based on encryptededdy):
  - First make sure the v4l2loopback kernel module is loaded:
     sudo modprobe v4l2loopback
 
