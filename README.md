@@ -8,10 +8,12 @@
 
 C-code usage (based on [encryptededdy](https://github.com/encryptededdy/ThermAppCam)):
  - First make sure the v4l2loopback kernel module is loaded:
-    sudo modprobe v4l2loopback
+    
+    > sudo modprobe v4l2loopback
 
  - Plug in the camera. Keep the lens covered as you start the software:
-    sudo dmtherm
+    
+    > sudo astrotherm
 
     The software will read NDARKS frames (as defined in main.c) for its 
     automatic calibration. It will also dump these dark frames as FITS images. 
