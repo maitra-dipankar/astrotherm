@@ -3,8 +3,8 @@
 
 ## * Median combine dark frames and dark subtract (in Python)
 
-![dark_subtraction](https://user-images.githubusercontent.com/81639258/224892783-925c929a-7b19-4f4e-b258-f1c56aa99bed.png)
- 
+![dark_subtraction](https://user-images.githubusercontent.com/81639258/225170064-442f5523-a59b-4b00-861e-1a6b85b66255.png)
+
 
 C-code usage (based on [encryptededdy](https://github.com/encryptededdy/ThermAppCam)):
  - First make sure the v4l2loopback kernel module is loaded:
