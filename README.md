@@ -38,6 +38,7 @@ C-code usage (based on [encryptededdy](https://github.com/encryptededdy/ThermApp
 ## Dependencies for the C-codes
 * v4l2loopback
 * libusb >= 1.0
+* cfitsio
 ## Dependencies for the python code
 * numpy, astropy, matplotlib
 --------------------------------------
