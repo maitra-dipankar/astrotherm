@@ -11,25 +11,27 @@ C-code usage (based on [encryptededdy](https://github.com/encryptededdy/ThermApp
     
     > sudo modprobe v4l2loopback
 
+- Find out which device v4l2 will use. Typically this is the last/latest entry in /dev/video*. For example, assume we are using /dev/video2.
+
  - Plug in the camera. Keep the lens covered as you start the software:
     
-    > sudo astrotherm
+    > sudo astrotherm /dev/video2
 
     The software will read NDARKS frames (as defined in main.c) for its 
     automatic calibration. It will also dump these dark frames as FITS images. 
-    After that is complete, you may remove the lens cap, open /dev/video0 in 
+    After that is complete, you may remove the lens cap, open /dev/video2 in 
     your video player of choice, E.g.
     
-    > vlc v4l2:///dev/video0
+    > vlc v4l2:///dev/video2
     
     or
     
-    > mplayer tv://device=/dev/video
+    > mplayer tv://device=/dev/video2
     
     to watch live stream video from the camera.
 
  - While the live stream video is displayed on vlc or mplayer go to the 
-   terminal where you typed 'sudo astrotherm'.
+   terminal where you typed 'sudo astrotherm /dev/video2'.
    Pressing s or S will save the instantaneous frame as a FITS image. The 
    name of the FITS will be the UTC time at that moment.
 
@@ -43,6 +45,8 @@ C-code usage (based on [encryptededdy](https://github.com/encryptededdy/ThermApp
 * numpy, astropy, matplotlib
 --------------------------------------
 ### Notes/References
+* 2023-Mar-13 (DM): provide video device (e.g. /dev/video2) to astrotherm at command line.
+
 * 2022-Feb-01 (DM): Rewrote the Makefile to take care of proper linking.
   > make clean
   
