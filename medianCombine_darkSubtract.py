@@ -17,8 +17,8 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 
 # Path to darks, and the raw 'science' FITS frames
-darkpath="/home/dmaitra/ThermAppCam/dmtest3/"
-rawfits = darkpath + 'thermapp_20230315_000230.fits'
+darkpath="./"
+rawfits = darkpath + 'thermapp_20230517_194046.fits'
 
 
 def median_combine_darks (darkpath):
@@ -140,4 +140,4 @@ rawheader['IMGTYPE'] = ("DarkSubtd", "Dark subtracted frame")
 fits.writeto(op, imred, header=rawheader, overwrite=True)
 
 # Uncomment the line below to create a PNG visualization
-#visualize_results(rawfits, rawdata, master_dark, imred)
+visualize_results(rawfits, rawdata, master_dark, imred)
