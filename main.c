@@ -20,7 +20,6 @@
 #define NDARKS 11
 #define DETNAM "ThermApp"
 
-#define VIDEO_DEVICE "/dev/video0"
 #undef FRAME_RAW
 
 #ifndef FRAME_RAW
@@ -92,6 +91,14 @@ int main(int argc, char *argv[])
 	int ret = EXIT_SUCCESS;
 	char fnam[BUF_LEN] = {0};
 	float ThermTempC;
+	const char *VIDEO_DEVICE = NULL;
+
+	if (argc != 2) {
+		printf("Usage: sudo astrotherm /dev/videoX\n");
+		return 0;
+	}
+
+	VIDEO_DEVICE = argv[1];
 
 	ThermApp *therm = thermapp_open();
 	if (!therm) {
