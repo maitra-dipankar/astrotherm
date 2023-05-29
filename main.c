@@ -19,7 +19,7 @@
 #define BUF_LEN 256
 #define NDARKS 11
 #define DETNAM "ThermApp"
-#define WAVLEN "7.5 -14"
+#define WAVELEN "7.5 -14 micron"
 #define PIXSZ 17
 #define FRAMERAT 8.7
 
@@ -339,6 +339,8 @@ int write_fits_fname(int16_t *frame_arr, char *fname, char *imgtyp, float TempC)
 	long array[PIXELS_DATA_SIZE];
 	long naxis =   2;                           /* 2-dimensional image */
 	long naxes[2] = {FRAME_WIDTH, FRAME_HEIGHT};
+	int pixsz = PIXSZ;
+	double framerat = FRAMERAT;
 
 	fitsfile *fptr;                        /* pointer to the FITS file */
 	
@@ -356,10 +358,10 @@ int write_fits_fname(int16_t *frame_arr, char *fname, char *imgtyp, float TempC)
 	if ( fits_update_key(fptr, TSTRING, "WAVELEN", &WAVELEN, 
 				"Microns", &status) )
 		return ( status );
-	if ( fits_update_key(fptr, TFLOAT, "PIXSZ", &PIXSZ, 
+	if ( fits_update_key(fptr, TINT, "PIXSZ", &pixsz, 
 				"Pixel size in microns", &status) )
 		return ( status );
-	if ( fits_update_key(fptr, TFLOAT, "FRAMERAT", &FRAMERAT, 
+	if ( fits_update_key(fptr, TDOUBLE, "FRAMERAT", &framerat, 
 				"Frame rate in HZ", &status) )
 		return ( status );
 	if ( fits_update_key(fptr, TSTRING, "IMGTYPE", imgtyp, 
