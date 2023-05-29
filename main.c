@@ -19,6 +19,9 @@
 #define BUF_LEN 256
 #define NDARKS 11
 #define DETNAM "ThermApp"
+#define WAVLEN "7.5 -14"
+#define PIXSZ 17
+#define FRAMERAT 8.7
 
 #undef FRAME_RAW
 
@@ -349,6 +352,15 @@ int write_fits_fname(int16_t *frame_arr, char *fname, char *imgtyp, float TempC)
 		return( status );
 	if ( fits_update_key(fptr, TSTRING, "INSTRUME", &DETNAM, 
 				"Detector", &status) )
+		return ( status );
+	if ( fits_update_key(fptr, TSTRING, "WAVELEN", &WAVELEN, 
+				"Microns", &status) )
+		return ( status );
+	if ( fits_update_key(fptr, TFLOAT, "PIXSZ", &PIXSZ, 
+				"Pixel size in microns", &status) )
+		return ( status );
+	if ( fits_update_key(fptr, TFLOAT, "FRAMERAT", &FRAMERAT, 
+				"Frame rate in HZ", &status) )
 		return ( status );
 	if ( fits_update_key(fptr, TSTRING, "IMGTYPE", imgtyp, 
 				"Science or Dark image", &status) )
